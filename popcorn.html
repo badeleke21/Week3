@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop Yeah!</title>
+    <!--imported the styles from bootstrap with the link in this section!-->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <style>
+      .navbar {
+        background-image: url("/c_popcorn.jpeg"); /* Add the path to your image */
+        background-size: cover;
+        padding: 10px; /* Adjust padding as needed */
+        color: white; /* Set text color to be visible on the image */
+      }
+      /* The overflow hidden property specifies how content will appear if its too big to fit in the area// this will add scroll bars or hide the content */
+      .gTables {
+        border-radius: 15px;
+        overflow: hidden;
+      }
+
+      .table1bg {
+      }
+      .flavors {
+        text-align: center;
+        size: 15em;
+      }
+
+      .table2bg {
+      }
+
+      .color {
+        color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <!--The container fluid in this section contains padding and alignment within a given viewport-->
+        <!--The navbar toggler will only grow to occupy the space in the viewport its occupying-->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <nav>
+            <ul>
+              <li>
+                <a
+                  class="nav-link active fs-5"
+                  aria-current="page"
+                  href="popcorn.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a class="nav-link fs-5" href="popcornform.html">Shop</a>
+              </li>
+            </ul>
+          </nav>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active fs-5"
+                aria-current="page"
+                href="popcorn.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="popcornform.html">Shop</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- bootstrap grid-begin  -->
+    <div class="container text-center">
+      <!-- grid row begining  -->
+      <div style="border: 2px solid red" class="row justify-content-md-center">
+        <!--Separated each column with colors to show visiblity -->
+        <!--The justify content in this section occupies the remaining avaialable space for items that dont use all the space in the container-->
+        <div style="border: 2px solid" class="col col-lg-6">
+          <!--This class here is from bootstrap: the col is telling it this is 1 column, lg=large, 6 only occupying 6/12 of the avaialable space for the page-->
+          <!-- custom table 1  -->
+          <table style="border: 2px solid blue" class="table gTables">
+            <thead>
+              <tr>
+                <th class="flavors" scope="col">Flavors</th>
+                <!--The scope in this table heading is telling that cell that this is a column-->
+                <th class="flavors" scope="col" colspan="2">Description</th>
+                <!--The scope="2" here is telling this specific column to occupy 2 cells-->
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">Mexican Cocoa</td>
+                <td>
+                  Luxurious Cocoa with subtle hints of classic flavors like
+                  cinnamon
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">Coconut Curry</td>
+                <td colspan="2">
+                  Savory popcorn blend, combining the creaminess of coconut with
+                  the aromatic spices of your classic curry
+                </td>
+              </tr>
+              <tr>
+                <td style="border: 2px solid yellow" colspan="2">
+                  GingerBread
+                </td>
+                <td>
+                  A holiday favorite! Combining the warm feeling of molasses and
+                  nutmeg this is the perfect holiday treat.
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">Caramel</td>
+                <td>
+                  Forever a classic, you cant go wrong with a tub of buttery,
+                  sweet, golden Caramel flavors.
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">Oreo Milkshake</td>
+                <td>
+                  The timeless cookie with its creaminess and sweetness,
+                  complemented with playful chocolate.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- custom table 1 end -->
+        </div>
+        <div class="col-md-auto">
+          <!--This column is occupying the rest of the space avaialbe (6/12 =12/12 for this column) with the auto and this column is medium sized-->
+          <!-- table 2 begin -->
+          <table class="table gTables">
+            <thead>
+              <tr>
+                <th scope="col">Sizes</th>
+                <th scope="col">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Large</td>
+                <td>$25.00</td>
+              </tr>
+              <tr>
+                <td>Medium</td>
+                <td>$17.00</td>
+              </tr>
+              <tr>
+                <td>Small</td>
+                <td>$.00</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- table 2 ending -->
+        </div>
+      </div>
+      <!-- grid row end -->
+      <!-- bootstrap grid - end  -->
+
+      <div class="container">
+        <!-- custom row-begin -->
+        <div class="row">
+          <div class="col-md-6 mb-4"></div>
+          <!--This div is only 6 and medium sized when the page is displaying at 720px -->
+        </div>
+        <!--custom row end -->
+      </div>
+    </div>
+  </body>
+</html>
